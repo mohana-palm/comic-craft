@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ComicCraft</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4f63d2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎨 ComicCraft</h1>
+
+    <p style="text-align:center;">
+        AI Comic Story Creator
+    </p>
+
+    <form action="/generate" method="post">
+
+        <label>Story Prompt</label>
+
+        <textarea
+            name="story_prompt"
+            rows="5"
+            placeholder="Example: A brave fox exploring an enchanted forest"
+            required></textarea>
+
+
+        <label>Main Character Name</label>
+
+        <input
+            type="text"
+            name="character_name"
+            placeholder="Example: Luna"
+            required>
+
+
+        <label>Setting</label>
+
+        <select name="setting">
+
+            <option value="Forest">
+                Forest
+            </option>
+
+            <option value="School">
+                School
+            </option>
+
+            <option value="City">
+                City
+            </option>
+
+            <option value="Space">
+                Space
+            </option>
+
+        </select>
+
+
+        <label>Story Tone</label>
+
+        <select name="tone">
+
+            <option value="Funny">
+                Funny
+            </option>
+
+            <option value="Dramatic">
+                Dramatic
+            </option>
+
+            <option value="Light-hearted">
+                Light-hearted
+            </option>
+
+            <option value="Poetic">
+                Poetic
+            </option>
+
+        </select>
+
+
+        <label>Art Style</label>
+
+        <select name="art_style">
+
+            <option value="Anime">
+                Anime
+            </option>
+
+            <option value="Comic Book">
+                Comic Book
+            </option>
+
+            <option value="Pixel Art">
+                Pixel Art
+            </option>
+
+            <option value="Realistic">
+                Realistic
+            </option>
+
+        </select>
+
+
+        <button type="submit">
+            ✨ Generate Comic
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
